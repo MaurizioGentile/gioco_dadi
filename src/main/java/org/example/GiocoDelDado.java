@@ -68,8 +68,12 @@ public class GiocoDelDado {
             }
         }
 
+        // Dopo la lettura completa, reimposta il puntatore del file alla posizione iniziale
+        file.seek(0);
+
         return punteggio;
     }
+
 
     public void cancellaArchivio() throws IOException {
         file.setLength(0);
